@@ -2,5 +2,10 @@
 # -*- coding: utf-8 -*-
 
 class Rectangle:
-    """This class defines a rectangle """
+    """Empty class Rectangle that defines a rectangle figure
+
+    Attributes:
+        empty
+    """
+
     pass
