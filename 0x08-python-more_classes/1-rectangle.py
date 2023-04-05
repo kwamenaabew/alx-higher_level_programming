@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Rectangle class that defines a rectangle
+based on 0-rectangle.py
+"""
+
 
 class Rectangle:
     """
@@ -67,4 +72,3 @@ class Rectangle:
                 raise ValueError("height must be >=0")
             else:
                 self.__height = value
-
