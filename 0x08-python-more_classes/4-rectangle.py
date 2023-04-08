@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 class rectangle that defines a rectangle by: (based on 3-rectangle.py)
 
