@@ -10,4 +10,3 @@ class Rectangle:
     Attributes: none
     """
     pass
-
