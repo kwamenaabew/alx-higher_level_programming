@@ -25,6 +25,25 @@ class Rectangle:
         self.__height = height
         self.__width = width
 
+    def __str__(self):
+        """
+        str method to print rectangle
+
+        Returns:
+            string : The string with # rectangle
+
+        """
+        string = ""
+        if self.__width == 0 or self.__height == 0:
+            return string
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                string += '#'
+            if i < self.__height - 1:
+                string += '\n'
+        return string
+
     @property
     def height(self):
         """
@@ -82,3 +101,23 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
+    def area(self):
+        """
+        Calculate the area of the rectangle
+
+        Returns:
+            The area of the rectangle
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Calculate the perimeter of the rectangle
+
+        Returns:
+            The perimeter of the rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)

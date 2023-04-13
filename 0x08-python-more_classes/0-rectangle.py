@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
-Empty class Rectangle that defines a rectangle
+Rectangle class
 """
 
 
 class Rectangle:
+    """Empty class Rectangle that defines a rectangle figure
+
+    Attributes:
+        empty
     """
-    Empty class Rectangle that defines a rectangle
-    Attributes: none
-    """
+
     pass
