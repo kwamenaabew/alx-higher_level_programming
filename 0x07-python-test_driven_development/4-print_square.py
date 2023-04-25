@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """
-This module is a function that prints a square with the character #
+This module is composed by a function that prints a square with the character #
 """
 
 
 def print_square(size):
-    """ This  function that prints a square with the character #
+    """ Function that prints a square with the character #
     Args:
-        size: size of the square
+        size: size of the square printed
     Returns:
-        none
+        No return
     Raises:
-        TypeError: when size is not an integer number
+        TypeError: If size is not an integer number
     """
 
     if not isinstance(size, int):

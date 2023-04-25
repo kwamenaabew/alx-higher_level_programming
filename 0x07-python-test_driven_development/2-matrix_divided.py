@@ -1,24 +1,22 @@
 #!/usr/bin/python3
 """
-This function divides the numbers of a matrix
+This module is composed by a function that divides the numbers of a matrix
 """
 
 
-def matrix_divide(matrix, div):
-    """This funtion divides in/float elements of a matrix
+def matrix_divided(matrix, div):
+    """ Function that divides the integer/float numbers of a matrix
     Args:
-    marix: list of lists of in/float
-    div: number that divides the matrix
+        matrix: list of a lists of integers/floats
+        div: number which divides the matrix
     Returns:
-    matrix that contains the result of the division
+        A new matrix with the result of the division
     Raises:
-    TypeError:
-    If the elements of the matrix aren't lists
-    If the elemetns of the lists aren't integers/floats
-    If div is not an integer/float number
-    If the lists of the matrix don't have the same size
-    ZeroDivisionError:
-    If divided by 0
+        TypeError: If the elements of the matrix aren't lists
+                   If the elemetns of the lists aren't integers/floats
+                   If div is not an integer/float number
+                   If the lists of the matrix don't have the same size
+        ZeroDivisionError: If div is zero
     """
 
     if not type(div) in (int, float):
@@ -27,26 +25,26 @@ def matrix_divide(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    txt = "matrix must be a matrix (list of lists) of integers/floats"
+    msg_type = "matrix must be a matrix (list of lists) of integers/floats"
 
     if not matrix or not isinstance(matrix, list):
-        raise TypeError(txt)
+        raise TypeError(msg_type)
 
-    zen_e = 0
-    txt_sze = "Each row of the matrix must have the same size"
+    len_e = 0
+    msg_size = "Each row of the matrix must have the same size"
 
-    for m in matrix:
-        if not m or not isinstance(m, list):
-            raise TypeError(txt)
+    for elems in matrix:
+        if not elems or not isinstance(elems, list):
+            raise TypeError(msg_type)
 
-        if zen_e != 0 and len(m) != zen_e:
-            raise TypeError(txt_size)
+        if len_e != 0 and len(elems) != len_e:
+            raise TypeError(msg_size)
 
-        for n in m:
-            if not type(n) in (int, float):
-                raise TypeError(txt)
+        for num in elems:
+            if not type(num) in (int, float):
+                raise TypeError(msg_type)
 
-        zen_e = len(m)
+        len_e = len(elems)
 
-    ll = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
-    return (ll)
+    m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return (m)
