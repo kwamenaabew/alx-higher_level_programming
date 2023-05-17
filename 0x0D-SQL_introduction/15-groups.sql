@@ -1,0 +1,5 @@
+-- Displays same score using COUNT, ORDER BY, GROUP BY
+-- DML querys to display number of records with same score
+SELECT score,COUNT(*) AS 'number' FROM second_table
+GROUP BY score
+ORDER BY score DESC;
